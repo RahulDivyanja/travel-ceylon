@@ -2,6 +2,7 @@ import React from "react";
 import NavbarHome from "../../components/NavbarHome";
 import ENBtn from "../../components/ENBtn";
 import Button from "../../components/HomeComponents/Button";
+import VisitCard from "../../components/HomeComponents/VisitCard";
 
 function Home() {
     return (
@@ -35,8 +36,34 @@ function Home() {
             <img src="src/assets/lake.jpeg" alt="travel" className="lake-img" />
           </section>
 
+          <section className="thirdSection">
+            <div className="getStart">
+                <p className="subHeading getStart-heading">Get Start Now!</p>
+                <p>Hurry up make your booking</p>
+                <div className="card-section">
+                    <VisitCard
+                        img="src/assets/king_bed.svg"
+                        title="Stays"
+                        text="1000+ Hotels and stays for you"
+                    />
+                    <VisitCard
+                        img="src/assets/local_taxi.svg"
+                        title="rides"
+                        text="Comfortable and safe rides"
+                    />
+                    <VisitCard
+                        img="src/assets/follow_the_signs.svg"
+                        title="Guides"
+                        text="Discover places with experts"
+                    />
+                </div>
+            </div>
+            <img src="src/assets/reader.jpeg" className="reader-img"></img>
+          </section>
 
-
+          <section className="fourthSection">
+          </section>
+      
         </body>
       );
 }
