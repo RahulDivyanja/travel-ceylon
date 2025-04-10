@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
-    <body>
+    <div>
       <div className="navcontainer">
         <div className="upperSection">
           <div className="logo">
-            <img src="src/assets/travelCeylon.svg" alt="traveCeylon" />
+            <img src="src/assets/travelCeylon.svg" alt="travelCeylon" />
           </div>
         </div>
         <div className="middleSection">
@@ -20,18 +21,24 @@ const Navbar = () => {
         <div className="navbar">
           <ul className="navList">
             <li className="navItem">
-              <Link to="/stays" className="navLink"><img src="src/assets/Vector.svg" alt="S" className="navIcon" />  Stays</Link>
-            </li>
-            <li className="navItem"> 
-              <Link to="/taxi" className="navLink"><img src="src/assets/taxi_alert.svg" alt="T" className="navIcon" />  Taxi</Link>
+              <Link to="/stays" className="navLink">
+                <img src="src/assets/Vector.svg" alt="S" className="navIcon" /> Stays
+              </Link>
             </li>
             <li className="navItem">
-              <Link to="/tour-guides" className="navLink"><img src="src/assets/share_location.svg" alt="T" className="navIcon" />   Tour Guides</Link>
+              <Link to="/taxi" className="navLink">
+                <img src="src/assets/taxi_alert.svg" alt="T" className="navIcon" /> Taxi
+              </Link>
+            </li>
+            <li className="navItem">
+              <Link to="/tour-guides" className="navLink">
+                <img src="src/assets/share_location.svg" alt="T" className="navIcon" /> Tour Guides
+              </Link>
             </li>
           </ul>
         </div>
       </div>
-    </body>
+    </div>
   );
 };
 

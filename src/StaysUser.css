@@ -1,0 +1,23 @@
+.stays-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.stays-nav-left button,
+.stays-nav-right img {
+  margin: 0 10px;
+}
+
+.stays-nav-center img {
+  max-width: 150px;
+}
+
+.stays-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
