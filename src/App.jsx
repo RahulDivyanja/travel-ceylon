@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from '../components/Navbar'
-import Stays from '../src/pages/Stays';
+import Home from '../src/pages/Home'; 
+import Stays from "../src/pages/Stays"; 
 import Taxi from  "../src/pages/Taxi";
 import TourGuides from "../src/pages/TourGuides";
 
@@ -12,6 +12,7 @@ function App() {
 
   return (
     <Router>
+      <Home />
       <Routes>
         
         <Route path="/stays" element={<Stays />} />
