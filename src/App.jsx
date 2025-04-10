@@ -12,9 +12,8 @@ function App() {
 
   return (
     <Router>
-      <Home />
       <Routes>
-        
+        <Route path="/" element={<Home />} />
         <Route path="/stays" element={<Stays />} />
         <Route path="/taxi" element={<Taxi />} />
         <Route path="/tour-guides" element={<TourGuides />} />

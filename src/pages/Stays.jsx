@@ -5,11 +5,14 @@ import VectorIcon from "../assets/Vector.svg"
 import TaxiIcon from "../assets/taxi_alert.svg"
 import ShareLocation from "../assets/share_location.svg"
 import Logo from "../assets/travelCeylon.svg"
-import Profile from "../assets/profile.png"
+import Profile from "../assets/Ellipse 3.png"
+
 
 const Stays = () => {
   return (
     <>
+    <body className="stays-body">
+      <div className="stays-header">
       <nav className="stays-nav">
         <div className="nav-left">
           <ul className="nav-list">
@@ -37,6 +40,8 @@ const Stays = () => {
           <img src={Profile} alt="Profile" className="profile-pic" />
         </div>
       </nav>
+      </div>
+      </body>
     </>
   );
 };

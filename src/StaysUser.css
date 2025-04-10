@@ -1,23 +1,86 @@
-.stays-navbar {
+/* Reset base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.stays-body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+} 
+
+
+/* Header background with full width */
+.stays-header {
+  width: 100vw; /* or 100% depending on your layout */
+  max-width: 100vw;
+  height: 80vh;
+  padding: 10px;
+  margin: 0 auto;
+  background-image: url('./assets/staysHeader.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Navigation bar */
+.stays-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f4f4f4;
-  padding: 10px;
+  background-color: rgba(244, 244, 244, 0); /* Slight transparency */
+  padding: 10px 20px;
   border-radius: 10px;
 }
 
-.stays-nav-left button,
-.stays-nav-right img {
-  margin: 0 10px;
+/* Navigation list styles */
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.stays-nav-center img {
+/* Navigation items */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Navigation links */
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  gap: 8px;
+}
+
+/* Logo in the center */
+.nav-center img {
   max-width: 150px;
 }
 
-.stays-profile-pic {
+/* Profile image */
+.profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+/* Optional hover effect for nav items */
+.nav-link:hover {
+  color: #ccc;
 }
