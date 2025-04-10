@@ -5,6 +5,7 @@ import Button from "../../components/HomeComponents/Button";
 import VisitCard from "../../components/HomeComponents/VisitCard";
 import IconBox from "../../components/HomeComponents/IconBox";
 import ProvinceGrid from "../../components/HomeComponents/ProvinceGrid";
+import Footer from "../../components/Footer";
 
 function Home() {
     return (
@@ -87,6 +88,8 @@ function Home() {
             <p className="subHeading">We cover all the Provinces in Sri Lanka</p>
             <ProvinceGrid />
           </section>
+
+          <Footer />
       
         </body>
       );
