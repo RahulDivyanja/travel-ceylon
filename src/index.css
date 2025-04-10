@@ -14,6 +14,7 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   align-items: center;
+  overflow-x: hidden;
 }
 
 section {
@@ -380,9 +381,153 @@ p {
 }
 
 /* Home - Forth/Testimonial Section */
-.forthSection {
-  background-color: red;
+.fourthSection {
+  width: 90vw;
+  background-color: #BAEBDA;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
+
+.topic-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.topic {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  padding: 3rem 2rem 0 2rem;
+}
+
+.register-part {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #FFFFFF;
+  padding: 4rem 2rem 2rem 2rem;
+  border-radius: 15px;
+}
+
+.icon-box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.register-text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000B2;
+}
+
+.register-part button {
+  border: 0;
+  font-weight: 500;
+  font-size: 24px;
+  width: 1119;
+  height: 59;
+  border-radius: 10px;
+  border-width: 2px;
+  padding: 15px 44px 15px 44px;
+  background-color: #8DD3BB;
+}
+
+/* Home - Fifth/Provinces Section */
+.fifthSection {
+  background-image: url('./assets/beach.jpeg');
+  margin: 0 -20px;
+  width: 100vw;
+
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  padding: 7rem 5rem 5rem 5rem;
+}
+
+.fifthSection .heading {
+  margin: 0;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.fifthSection .subHeading {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 250%;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.province-card {
+  padding: 1rem;
+  display: flex;
+  background-color: white;
+  box-shadow: 0px 4px 16px 0px #1122110D;
+  border-radius: 16px;
+  gap: 1rem;
+}
+
+.province-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.province-card-text .title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #112211;
+}
+
+.province-card-text .description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #112211;
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.province-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0 4rem;
+}
+
+
+
 
 
 
