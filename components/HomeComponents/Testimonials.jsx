@@ -1,7 +1,11 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination, Autoplay } from 'swiper/modules';
 import "./Testimonials.css";
 import ReviewCard from "./ReviewCard";
 import Button from "./Button";
@@ -60,26 +64,6 @@ const testimonials = [
 ];
 
 function Testimonials() {
-    // Settings for the slider
-    const settings = {
-        dots: false,
-        autoplay: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
-        swipe: true, 
-        draggable: true, 
-        responsive: [
-          {
-            breakpoint: 768, 
-            settings: {
-              slidesToShow: 1
-            }
-          }
-        ]
-      };
 
       return ( <div className="testimonial-section">
         <div>
@@ -87,19 +71,51 @@ function Testimonials() {
             <p className="text">What people says about our facilities and services</p>
         </div>
 
-        <Slider {...settings}>
-          {/* Loop through the reviews and pass each one to Review component */}
-          {testimonials.map((item, index) => (
-            <ReviewCard key={index} review={item} />
-          ))}
-        </Slider>
+        <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        pagination={{
+          clickable: false,
+        }}
+
+        autoplay={{
+        delay: 500,
+        disableOnInteraction: false,
+        }}
+
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }}
+
+        modules={[Pagination]}
+        className="mySwiper">
+
+        {testimonials.map((item, index) => (
+            <SwiperSlide key={index}> <ReviewCard review={item} /> </SwiperSlide>
+        ))}
+
+        </Swiper>
+        
 
         <div className="btn-container">
             <Button text="Add review" className="add-review-btn" />
         </div>
         
       </div>
-      )
+      );
 };
+
+
 
 export default Testimonials;

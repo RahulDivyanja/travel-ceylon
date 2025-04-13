@@ -6,7 +6,7 @@ import VisitCard from "../../components/HomeComponents/VisitCard";
 import IconBox from "../../components/HomeComponents/IconBox";
 import ProvinceGrid from "../../components/HomeComponents/ProvinceGrid";
 import Footer from "../../components/Footer";
-// import Testimonials from "../../components/HomeComponents/Testimonials";
+import Testimonials from "../../components/HomeComponents/Testimonials";
 
 function Home() {
     return (
@@ -65,7 +65,7 @@ function Home() {
             <img src="src/assets/reader.jpeg" className="reader-img"></img>
           </section>
 
-          {/* <Testimonials /> */}
+          <Testimonials />
 
           <section className="fourthSection">
             <div class="topic-part">
