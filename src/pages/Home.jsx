@@ -6,6 +6,7 @@ import VisitCard from "../../components/HomeComponents/VisitCard";
 import IconBox from "../../components/HomeComponents/IconBox";
 import ProvinceGrid from "../../components/HomeComponents/ProvinceGrid";
 
+
 function Home() {
     return (
         <body>

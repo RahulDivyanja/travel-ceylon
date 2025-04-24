@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  body .entry-container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8dd3bb;
+    background-image: url('/assets/backgroundill.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px 20px 20px; 
+    overflow-y: auto;
+    z-index: 1;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 600px;
+  }
+  
+  /* Input fields */
+  .entryarea {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1px;
+  }
+  
+  .labelline {
+    position: absolute;
+    top: -8px;
+    left: 14px;
+    background-color: white;
+    padding: 0 6px;
+    font-size: 13px;
+    color: #333;
+    z-index: 1;
+  }
+  
+  input {
+    width: 100%;
+    padding: 14px 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    z-index: 0;
+  }
+  
+  .tag-line {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+  
+  .note {
+    font-size: 10px;
+    margin-bottom: 30px;
+    margin-top: 8px;
+    text-align: left;
+    opacity: 50%;
+  }
+  
+  button {
+    background-color: #8dd3bb;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border: none;
+  }
+  
+  button:hover {
+    opacity: 70%;
+  }
+  
+  .phone-row {
+    display: flex;
+    gap: 20px; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+  }
+  
+  .phone-row .entryarea {
+    flex: 1; 
+    min-width: 45%;
+  }
+  
+  .phone-number {
+    margin-bottom: 25px;
+  }
+  
+  .email-section {
+    margin-bottom: 25px;
+  }
+  
+  .back-btn {
+    margin-right: 30px;
+  }
+  
+  /* Facilities Page Specific Styles */
+  .facilities-checklist {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .facilities-checklist h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .left-checkbox-group,
+  .right-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+  }
+  
+  .left-checkbox-group label,
+  .right-checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .left-checkbox-group input[type="checkbox"],
+  .right-checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  /* Override styles for checkbox inputs only */
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Navigation buttons specifically for facilities page */
+  .facilities-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 600px) {
+    .checkbox-group {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .left-checkbox-group,
+    .right-checkbox-group {
+      width: 100%;
+    }
+  }
