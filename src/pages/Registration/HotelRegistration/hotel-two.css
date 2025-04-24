@@ -10,13 +10,13 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.hotel-one-wrapper {
+.hotel-two-wrapper {
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
-.hotel-one-entry-container {
+.hotel-two-entry-container {
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -31,14 +31,13 @@ body {
   z-index: 1;
 }
 
-.hotel-one-progressbar {
+.progressbar {
   width: 100%;
   max-width: 600px;
   padding: 10px;
-  margin-top: 0;
 }
 
-.hotel-one-container {
+.hotel-two-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -50,13 +49,25 @@ body {
   margin: 10px;
 }
 
-.hotel-one-entryarea {
-  position: relative;
+.hotel-two-phone-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
   width: 100%;
-  margin-bottom: 1px;
 }
 
-.hotel-one-labelline {
+.hotel-two-phone-row .hotel-two-entryarea {
+  flex: 1;
+  position: relative;
+}
+
+.hotel-two-entryarea {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.hotel-two-labelline {
   position: absolute;
   top: -8px;
   left: 14px;
@@ -78,13 +89,13 @@ input {
   z-index: 0;
 }
 
-.hotel-one-tag-line {
+.hotel-two-tag-line {
   font-size: 14px;
   text-align: left;
   margin-bottom: 12px;
 }
 
-.hotel-one-note {
+.hotel-two-note {
   font-size: 10px;
   margin-bottom: 30px;
   margin-top: 8px;
@@ -92,29 +103,27 @@ input {
   opacity: 50%;
 }
 
-.hotel-one-button-container {
+.hotel-two-button-container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-button {
+.hotel-two-back-btn,
+.hotel-two-next-btn {
   background-color: #8dd3bb;
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 10px 30px;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-button:hover {
-  opacity: 70%;
-}
-
-.hotel-one-back-btn {
+.hotel-two-back-btn {
   margin-right: 30px;
 }
 
-.hotel-one-next-btn {
-  background-color: #8dd3bb;
+.hotel-two-back-btn:hover,
+.hotel-two-next-btn:hover {
+  opacity: 70%;
 }

@@ -10,20 +10,20 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.hotel-one-wrapper {
+.taxi-three-wrapper {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
-.hotel-one-entry-container {
+.taxi-three-entry-container {
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #8dd3bb;
-  background-image: url('/assets/backgroundill.png');
+  background-image: url("/assets/backgroundill.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,14 +31,13 @@ body {
   z-index: 1;
 }
 
-.hotel-one-progressbar {
+.progressbar {
   width: 100%;
   max-width: 600px;
   padding: 10px;
-  margin-top: 0;
 }
 
-.hotel-one-container {
+.taxi-three-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -50,13 +49,39 @@ body {
   margin: 10px;
 }
 
-.hotel-one-entryarea {
-  position: relative;
-  width: 100%;
-  margin-bottom: 1px;
+.taxi-three-select {
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  font-size: 12px;
+  margin-bottom: 30px;
+  outline: none;
+  appearance: menulist;
+  background-color: white;
+  text-align: left;
+  padding: 10px;
+  padding-right: 10px;
 }
 
-.hotel-one-labelline {
+.taxi-three-reg-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.taxi-three-reg-row .taxi-three-entryarea {
+  flex: 1;
+  position: relative;
+}
+
+.taxi-three-entryarea {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.taxi-three-labelline {
   position: absolute;
   top: -8px;
   left: 14px;
@@ -78,13 +103,13 @@ input {
   z-index: 0;
 }
 
-.hotel-one-tag-line {
+.taxi-three-tag-line {
   font-size: 14px;
   text-align: left;
   margin-bottom: 12px;
 }
 
-.hotel-one-note {
+.taxi-three-note {
   font-size: 10px;
   margin-bottom: 30px;
   margin-top: 8px;
@@ -92,29 +117,27 @@ input {
   opacity: 50%;
 }
 
-.hotel-one-button-container {
+.taxi-three-button-container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-button {
+.taxi-three-back-btn,
+.taxi-three-next-btn {
   background-color: #8dd3bb;
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 10px 30px;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-button:hover {
-  opacity: 70%;
-}
-
-.hotel-one-back-btn {
+.taxi-three-back-btn {
   margin-right: 30px;
 }
 
-.hotel-one-next-btn {
-  background-color: #8dd3bb;
+.taxi-three-back-btn:hover,
+.taxi-three-next-btn:hover {
+  opacity: 70%;
 }
