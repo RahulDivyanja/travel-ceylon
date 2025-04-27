@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .taxi-six-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .taxi-six-entry-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8dd3bb;
+    background-image: url('/assets/backgroundill.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 0;
+    z-index: 1;
+  }
+  
+  .taxi-six-progressbar {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-top: 0;
+  }
+  
+  .taxi-six-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 10px;
+  }
+  
+  .taxi-six-tag-line {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .taxi-six-tag-line-d {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  .taxi-six-description-box {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    resize: vertical;
+    min-height: 85px;
+    outline: none;
+ 
+  }
+  
+  .taxi-six-terms {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .taxi-six-checkbox {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+  
+  .taxi-six-checkbox-label {
+    font-size: 12px;
+    color: #333;
+    cursor: pointer;
+  }
+
+.taxi-six-checkbox {
+
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+ 
+  .taxi-six-checkbox-label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .taxi-six-checkbox-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  
+  .taxi-six-checkbox:checked + .taxi-six-checkbox-label::before {
+    background-color: #8DD3BB;
+
+  }
+  
+ 
+  .taxi-six-checkbox:checked + .taxi-six-checkbox-label::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-70%) rotate(45deg);
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+  }
+  
+
+  .taxi-six-checkbox:focus + .taxi-six-checkbox-label::before {
+    box-shadow: 0 0 0 2px rgba(141, 211, 187, 0.3);
+  }
+  
+
+  .taxi-six-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .taxi-six-back-btn,
+  .taxi-six-next-btn {
+    background-color: #8dd3bb;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .taxi-six-back-btn {
+    margin-right: 30px;
+  }
+  
+  .taxi-six-back-btn:hover,
+  .taxi-six-next-btn:hover {
+    opacity: 70%;
+  }
+  
+  .taxi-six-next-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 480px) {
+    .taxi-six-container {
+      padding: 24px;
+    }
+  }
