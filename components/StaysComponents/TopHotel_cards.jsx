@@ -110,7 +110,7 @@ const TopHotelCards = () => {
           <button 
             onClick={() => scroll('left')}
             disabled={scrollPosition <= 0}
-            className={`scroll-btn scroll-left ${!isScrollable || scrollPosition <= 0 ? 'disabled' : ''}`}
+            className={`scroll-btn scroll-down ${!isScrollable || scrollPosition <= 0 ? 'disabled' : ''}`}
             aria-label="Scroll left"
             data-testid="scroll-left-btn"
           >
@@ -138,7 +138,7 @@ const TopHotelCards = () => {
           <button 
             onClick={() => scroll('right')}
             disabled={scrollPosition >= maxScroll}
-            className={`scroll-btn scroll-right ${!isScrollable || scrollPosition >= maxScroll ? 'disabled' : ''}`}
+            className={`scroll-btn scroll-up ${!isScrollable || scrollPosition >= maxScroll ? 'disabled' : ''}`}
             aria-label="Scroll right"
             data-testid="scroll-right-btn"
           >

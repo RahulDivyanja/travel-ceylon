@@ -113,18 +113,20 @@
 
 /* Scroll Buttons */
 .scroll-btn {
-  position: absolute;
+  position: relative;
   background-color: white;
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.226);
   cursor: pointer;
   z-index: 10;
+  transition: background-color 0.2s;
 }
 
 .scroll-btn:hover {
@@ -137,15 +139,35 @@
 }
 
 .scroll-up {
-  top: -20px;
-  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  position: relative;
+  top: -270px;
+  left: 100%;
   transform: translateX(-50%);
+  display: flex;
+  align-items: center;
 }
 
 .scroll-down {
-  bottom: -20px;
-  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  bottom: -240px;
+  left: 0%;
   transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  
 }
 
 /* Responsive Styles */

@@ -10,6 +10,7 @@ import DestinationFilter from "../../components/DestinationFilter";
 import TopHotel_cards from "../../components/StaysComponents/TopHotel_cards";
 import Search_Section from "../../components/StaysComponents/Search_Section";
 import Offer_cards from "../../components/StaysComponents/Offer_cards";
+import Stays_review from "../../components/StaysComponents/Stays_review";
 const Stays = () => {
   return (
     <>
@@ -67,12 +68,19 @@ const Stays = () => {
           <Search_Section />
           <div className="offer-section">
             <div className="offer-title1">What we Offer</div>
-            <div className="offer-subtitle1">Enjoy unforgettable stays across Sri Lanka with handpicked hotels for every traveler. 
-              From beachfront villas to hilltop hideaways, each stay promises comfort, charm, and convenience. Verified properties, 
-              transparent rates, and flexible check-in options—book instantly and stay your way!</div>
+            <div className="offer-subtitle1">
+              Enjoy unforgettable stays across Sri Lanka with handpicked hotels
+              for every traveler. From beachfront villas to hilltop hideaways,
+              each stay promises comfort, charm, and convenience. Verified
+              properties, transparent rates, and flexible check-in options—book
+              instantly and stay your way!
+            </div>
             <div className="offer-cards">
               <Offer_cards />
             </div>
+          </div>
+          <div className="review-section">
+            <Stays_review />
           </div>
         </div>
       </div>
