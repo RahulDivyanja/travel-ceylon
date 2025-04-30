@@ -1,66 +1,71 @@
-/* Reset base styles */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* ===== LAYOUT BASE STYLES ===== */
 .stays-body {
-  margin: 0;
-  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-} 
+}
 
-
-/* Header background with full width */
+/* ===== HEADER ===== */
 .stays-header {
-  width: 100vw; /* or 100% depending on your layout */
+  width: 100vw;
   max-width: 100vw;
-  height: 80vh;
-  padding: 10px;
+  height: 90vh;
+  padding: 30px 30px 0;
   margin: 0 auto;
-  background-image: url('./assets/staysHeader.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("./assets/staysHeader.png") no-repeat center center / cover;
   position: relative;
 }
 
-/* Navigation bar */
-.stays-nav {
+/* ===== NAVIGATION ===== */
+.stays-nav,
+.stays-filter-nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(244, 244, 244, 0); /* Slight transparency */
+  background-color: transparent;
   padding: 10px 20px;
-  border-radius: 10px;
+  flex-wrap: wrap;
 }
 
-/* Navigation list styles */
-.nav-list {
+.nav-list,
+.stays-filter-nav-list {
   display: flex;
   align-items: center;
   gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
-/* Navigation items */
-.nav-item {
+.nav-item,
+.stays-filter-nav-item {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 5px 10px;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
 
-/* Navigation links */
-.nav-link {
-  font-family: 'Montserrat', sans-serif;
+.nav-link,
+.stays-filter-nav-link {
+  font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -68,19 +73,315 @@
   gap: 8px;
 }
 
-/* Logo in the center */
-.nav-center img {
-  max-width: 150px;
+.stays-filter-nav-link {
+  color: rgb(2, 2, 2);
 }
 
-/* Profile image */
-.profile-pic {
+.nav-center,
+.stays-filter-nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.nav-center img,
+.stays-filter-nav-center img {
+  max-width: 200px;
+}
+
+.nav-right,
+.stays-filter-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 30px;
+}
+
+.profile-pic,
+.stays-filter-profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-/* Optional hover effect for nav items */
+.profile-name,
+.stays-filter-profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.stays-filter-profile-name {
+  color: black;
+}
+
+.nav-icon:hover,
 .nav-link:hover {
-  color: #ccc;
+  filter: brightness(0) saturate(100%) invert(29%) sepia(94%) saturate(746%) hue-rotate(197deg) brightness(97%) contrast(94%);
+}
+
+/* ===== TEXT OVERLAY ===== */
+.text-overlay-container {
+  position: relative;
+  top: 100px;
+  left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+  max-width: 90%;
+  padding-left: 18px;
+}
+
+.text-content {
+  max-width: 700px;
+  text-align: left;
+}
+
+.main-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.sub-heading {
+  font-size: 1.215rem;
+  color: white;
+  opacity: 0.9;
+}
+
+/* ===== SELECTION AREA ===== */
+.selaction-area,
+.stays-filter-selection-area {
+  display: flex;
+  margin: 120px auto 50px;
+  width: 90%;
+  min-height: 160px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  flex-direction: row;
+}
+
+.selaction-area h3,
+.stays-filter-selection-area h3 {
+  font-family: "Montserrat", sans-serif;
+  padding: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(44, 43, 43);
+}
+
+/* ===== CARD SECTION ===== */
+.stays-card {
+  display: flex;
+  position: relative;
+  top: 520px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ===== TITLES ===== */
+.section-title,
+.offer-title1 {
+  font-size: 2.1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.section-subtitle,
+.offer-subtitle1 {
+  font-size: 1.125rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* ===== OFFER SECTION ===== */
+.offer-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  top: 310px;
+  margin-left: 27px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .stays-header {
+    height: 70vh;
+    padding: 20px;
+  }
+
+  .text-overlay-container {
+    top: 80px;
+    width: 100%;
+  }
+
+  .main-heading {
+    font-size: 2.8rem;
+  }
+
+  .sub-heading {
+    font-size: 1rem;
+  }
+
+  .stays-card {
+    top: 200px;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .selaction-area,
+  .stays-filter-selection-area {
+    margin-top: 40px;
+  }
+
+  .offer-section {
+    margin-top: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stays-header {
+    height: 60vh;
+    padding: 15px;
+  }
+
+  .text-overlay-container {
+    top: 60px;
+    left: 15px;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+  }
+
+  .sub-heading {
+    font-size: 0.9rem;
+  }
+
+  .selaction-area,
+  .stays-filter-selection-area {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .selaction-area h3,
+  .stays-filter-selection-area h3 {
+    padding: 20px;
+  }
+
+  .stays-card {
+    top: 150px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .offer-section {
+    margin-top: 380px;
+    margin-left: 15px;
+    width: calc(100% - 30px);
+  }
+
+  .offer-title1 {
+    font-size: 1.8rem;
+  }
+
+  .offer-subtitle1 {
+    font-size: 0.9rem;
+    padding-right: 50px;
+  }
+
+  .profile-pic,
+  .stays-filter-profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile-name,
+  .stays-filter-profile-name {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stays-header {
+    height: 50vh;
+  }
+
+  .nav-center,
+  .stays-filter-nav-center {
+    position: relative;
+    left: 0;
+    transform: none;
+    width: 100%;
+    margin-bottom: 10px;
+    order: -1;
+  }
+
+  .text-overlay-container {
+    top: 30px;
+    left: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .main-heading {
+    font-size: 1.7rem;
+  }
+
+  .sub-heading {
+    font-size: 0.8rem;
+  }
+
+  .selaction-area,
+  .stays-filter-selection-area {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .selaction-area h3,
+  .stays-filter-selection-area h3 {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .stays-card {
+    top: 120px;
+    gap: 15px;
+  }
+
+  .section-title,
+  .offer-title1 {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle,
+  .offer-subtitle1 {
+    font-size: 0.8rem;
+    padding-right: 20px;
+  }
+
+  .offer-section {
+    margin-top: 300px;
+    margin-left: 10px;
+    width: calc(100% - 20px);
+  }
 }
