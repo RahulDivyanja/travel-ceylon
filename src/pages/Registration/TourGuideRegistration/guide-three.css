@@ -1,0 +1,191 @@
+/* GuideForm.css */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .gude-three-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .gude-three-entry-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8dd3bb;
+    background-image: url('/assets/backgroundill.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 0;
+    z-index: 1;
+  }
+  
+  .progressbar {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+  }
+  
+  .gude-three-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 10px;
+  }
+
+  
+  .guide-two-container {
+    margin-bottom: 30px;
+  }
+  
+  .guide-three-tag-line {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  
+  /* Checkbox styles */
+  .guide-step-three-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+    margin-left: 30px;
+  }
+  
+  .guide-step-three-checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .guide-step-three-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .guide-step-three-custom-checkbox {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    margin-right: 12px;
+  }
+  
+  .guide-step-three-checkbox:checked ~ .guide-step-three-custom-checkbox {
+    background-color: #8DD3BB;
+    border-color: #8DD3BB;
+  }
+  
+  .guide-step-three-checkbox:checked ~ .guide-step-three-custom-checkbox:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 0.5px;
+    width: 4px;
+    height:8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .guide-step-three-label-text {
+    font-size: 14px;
+  }
+  
+  /* Area selection styles */
+  .guide-step-three-area-row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .guide-step-three-field-container {
+    position: relative;
+    flex: 1;
+  }
+  
+  .guide-step-three-floating-label {
+    position: absolute;
+    top: -7px;
+    left: 10px;
+    padding: 0 5px;
+    background-color: white;
+    font-size: 12px;
+    z-index: 1;
+    color: black;
+  }
+  
+  .guide-step-three-select-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .guide-step-three-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    background-color: #fff;
+    opacity: 60%;
+  }
+  
+  .guide-step-three-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    opacity: 60%;
+  }
+  
+  .guide-step-three-select-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #555;
+    pointer-events: none;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .guide-step-three-area-row {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .guide-step-three-field-container {
+      width: 100%;
+    }
+  }
