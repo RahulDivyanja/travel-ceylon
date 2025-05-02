@@ -1,0 +1,27 @@
+<div className="hotel-four-arrows">
+            <button className="hotel-four-arrowup" onClick={() => setGuestCount(prev => Math.min(prev + 1, 99))}><img src="/assets/arrow_drop_up.svg" alt="" /></button>
+            <button className="hotel-four-arrowdown" onClick={() => setGuestCount(prev => Math.max(prev - 1, 1))}><img src="/assets/arrow_drop_down.svg" alt="" /></button>
+          </div>
+
+          <div className="hotel-four-number-container2">
+          <input
+            type="number"
+            className="hotel-four-number-input2  "
+            min="1"
+            value={guestCount}
+            onChange={(e) => setGuestCount(Number(e.target.value))}
+          />
+        </div>
+
+        <div className="hotel-four-number-container2">
+            <input
+              type="number"
+              className="hotel-four-number-input2"
+              min="1"
+              value={roomCount}
+              onChange={(e) => setRoomCount(Number(e.target.value))}
+            />
+          </div>
+          </div>
+        </div>
+          
