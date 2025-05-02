@@ -1,0 +1,157 @@
+/* taxi Step four Specific Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+.step-four-entry-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8dd3bb;
+    background-image: url('/assets/backgroundill.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 0;
+    z-index: 1;
+  }
+  
+  .step-four-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:40px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 590px;
+    margin: 10px;
+  }
+  
+  .step-four-facilities-header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .step-four-tag-line {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .step-four-checkbox-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .step-four-left-column,
+  .step-four-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  /* Hide default checkbox */
+  .step-four-checkbox {
+    display: none;
+  }
+  
+  /* Custom checkbox design */
+  .custom-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+ 
+  .step-four-checkbox:checked + .custom-checkbox {
+    background-color: #8DD3BB;
+    border-color: #8DD3BB;
+  }
+  
+  .step-four-checkbox:checked + .custom-checkbox::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .step-four-checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .step-four-label-text {
+    font-size: 12px;
+  }
+  
+  .step-four-nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+  }
+  
+  .step-four-back-btn,
+  .step-four-next-btn {
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  
+  .step-four-back-btn {
+    background-color: #8DD3BB;
+  }
+  
+  .step-four-next-btn {
+    background-color: #8DD3BB;
+  }
+  
+  .step-four-back-btn:hover,
+  .step-four-next-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 480px) {
+    .step-four-checkbox-container {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .step-four-left-column,
+    .step-four-right-column {
+      width: 100%;
+      align-items: flex-start;
+    }
+  }
+  

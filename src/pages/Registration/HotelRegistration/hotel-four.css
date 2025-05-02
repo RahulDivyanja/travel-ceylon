@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hotel-four-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hotel-four-entry-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8dd3bb;
+  background-image: url("/assets/backgroundill.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 0;
+  z-index: 1;
+}
+
+.hotel-four-progressbar {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin-top: 0;
+}
+
+.hotel-four-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 10px;
+}
+
+.hotel-four-tag-line {
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 12px;
+  color: #212121;
+}
+
+.hotel-four-select {
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  margin-bottom: 30px;
+  outline: none;
+  appearance: menulist;
+  background-color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+.hotel-four-number-container {
+  position: relative;
+}
+
+.hotel-four-control-btn {
+  transform: translateY(-14px);
+  align-items: center;
+}
+.hotel-four-number-container2 {
+  width: 150px;
+}
+.hotel-four-bed-controls .hotel-four-bed-count {
+  font-size: 12px;
+}
+
+.hotel-four-number-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.hotel-four-bed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.hotel-four-bed-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hotel-four-bed-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hotel-four-bed-icon {
+  width: 60px;
+  height: 60px;
+  filter: grayscale(1);
+  opacity: 0.9;
+}
+
+.hotel-four-bed-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hotel-four-bed-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #212121;
+}
+
+.hotel-four-bed-size {
+  font-size: 12px;
+  color: #757575;
+}
+
+.hotel-four-bed-controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  height: 40px;
+  padding: 0 4px;
+  background-color: #fff;
+}
+
+.hotel-four-control-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hotel-four-control-btn img {
+  width: 14px;
+  height: 14px;
+}
+
+.hotel-four-bed-count {
+  width: 30px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hotel-four-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.hotel-four-back-btn {
+  background-color: #8dd3bb;
+  margin-right: 30px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hotel-four-next-btn {
+  background-color: #8dd3bb;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hotel-four-back-btn:hover,
+.hotel-four-next-btn:hover {
+  opacity: 70%;
+}
+
+@media (max-width: 480px) {
+  .hotel-four-container {
+    padding: 24px;
+  }
+
+  .hotel-four-bed-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .hotel-four-bed-controls {
+    align-self: flex-start;
+    margin-left: 60px;
+  }
+}

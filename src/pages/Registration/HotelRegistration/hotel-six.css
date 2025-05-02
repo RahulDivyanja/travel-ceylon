@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .hotel-six-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .hotel-six-entry-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8dd3bb;
+    background-image: url('/assets/backgroundill.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 0;
+    z-index: 1;
+  }
+  
+  .hotel-six-progressbar {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-top: 0;
+  }
+  
+  .hotel-six-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 10px;
+  }
+  
+  .hotel-six-tag-line {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .hotel-six-description-box {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    resize: vertical;
+    min-height: 120px;
+    outline: none;
+  }
+  
+  .hotel-six-terms {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .hotel-six-checkbox {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+  
+  .hotel-six-checkbox-label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+  }
+
+.hotel-six-checkbox {
+
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+ 
+  .hotel-six-checkbox-label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .hotel-six-checkbox-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  
+  .hotel-six-checkbox:checked + .hotel-six-checkbox-label::before {
+    background-color: #8DD3BB;
+
+  }
+  
+ 
+  .hotel-six-checkbox:checked + .hotel-six-checkbox-label::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-70%) rotate(45deg);
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+  }
+  
+
+  .hotel-six-checkbox:focus + .hotel-six-checkbox-label::before {
+    box-shadow: 0 0 0 2px rgba(141, 211, 187, 0.3);
+  }
+  
+
+  .hotel-six-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .hotel-six-back-btn,
+  .hotel-six-next-btn {
+    background-color: #8dd3bb;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .hotel-six-back-btn {
+    margin-right: 30px;
+  }
+  
+  .hotel-six-back-btn:hover,
+  .hotel-six-next-btn:hover {
+    opacity: 70%;
+  }
+  
+  .hotel-six-next-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 480px) {
+    .hotel-six-container {
+      padding: 24px;
+    }
+  }

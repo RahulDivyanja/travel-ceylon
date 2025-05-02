@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .guide-two-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .guide-two-entry-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8dd3bb;
+    background-image: url('/assets/backgroundill.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 0;
+    z-index: 1;
+  }
+  
+  .progressbar {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+  }
+  
+  .guide-two-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 10px;
+  }
+  
+  .guide-two-entryarea {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  
+  .guide-two-labelline {
+    position: absolute;
+    top: -8px;
+    left: 14px;
+    background-color: white;
+    padding: 0 6px;
+    font-size: 12px;
+    color: #333;
+    z-index: 1;
+  }
+  
+  input {
+    width: 100%;
+    padding: 14px 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    z-index: 0;
+  }
+  
+  .guide-two-tag-line {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+  
+  .guide-two-note {
+    font-size: 10px;
+    margin-top: px;
+    text-align: left;
+    opacity: 50%;
+    transform: translateY(-25px);
+  }
+  
+  .guide-two-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .guide-two-back-btn,
+  .guide-two-next-btn {
+    background-color: #8dd3bb;
+    margin-top: 10px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .guide-two-back-btn {
+    margin-right: 30px;
+  }
+  
+  .guide-two-back-btn:hover,
+  .guide-two-next-btn:hover {
+    opacity: 70%;
+  }
+  
+.guide-two-phone-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .guide-two-phone-row .guide-two-entryarea {
+    flex: 1;
+    position: relative;
+  }
+
+  .guide-two-tag-line {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .guide-two-upload-box {
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  
+  .guide-two-upload-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    opacity: 70%;
+  }
+  
+  .guide-two-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .guide-two-upload-box .main-line {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  .guide-two-upload-box .second-line {
+    font-size: 10px;
+    text-align: center;
+    color: #757575;
+    margin-top: 0;
+  }
+  
+  .guide-two-preview-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .guide-two-preview-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .guide-two-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .guide-two-remove-btn {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: #212121;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
