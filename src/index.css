@@ -457,11 +457,13 @@ p {
   background-image: url('./assets/beach.jpeg');
   margin: 0 -20px;
   width: 100vw;
-
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
   padding: 7rem 5rem 5rem 5rem;
+  position: relative;
+  top: 24px;
+  z-index: -1;
 }
 
 .fifthSection .heading {
@@ -523,6 +525,61 @@ p {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 2rem 0 4rem;
+}
+
+/* Footer Styles */
+.footer {
+  display: grid;
+  grid-template-columns: 30% repeat(4, 1fr);
+  background-color: #8DD3BB;
+  border-radius: 24px 24px 0 0;
+  margin: 0 -20px;
+  padding: 4rem 4rem 3rem;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.socials img {
+  margin: 0 10px;
+}
+
+.footer-title {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #112211;
+  margin-bottom: 1rem;
+}
+
+.footer-list {
+  list-style-type: none;
+}
+
+.footer-links {
+  padding: 1rem;
+}
+
+.footer-list li {
+  margin-bottom: 1rem;
+}
+
+.footer-list li a{
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #112211;
+  text-decoration: none;
 }
 
 
