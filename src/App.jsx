@@ -3,6 +3,7 @@ import Home from '../src/pages/Home';
 import Stays from "../src/pages/Stays"; 
 import Taxi from  "../src/pages/Taxi";
 import TourGuides from "../src/pages/TourGuides";
+import StaysFilter from "../src/pages/StaysFilter";
 import Registration from './pages/Registration/Registration';
 import HotelStepOne from './pages/Registration/HotelRegistration/hotel-One';
 import HotelStepTwo from './pages/Registration/HotelRegistration/hotel-Two';
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/stays" element={<Stays />} />
+        <Route path="/stays/stays-filter?" element={<StaysFilter />} />
         <Route path="/taxi" element={<Taxi />} />
         <Route path="/tour-guides" element={<TourGuides />} />
         <Route path="/registration" element={<Registration />} />

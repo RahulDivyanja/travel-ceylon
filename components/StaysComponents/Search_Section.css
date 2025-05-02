@@ -1,179 +1,141 @@
-.SSection-container {
+/* Isolated styles under .CustomSection wrapper to prevent conflicts */
+
+.CustomSection .SSection-container {
     position: relative;
-    top: 250px;
+    top: -250px;
     width: 95%;
+    max-width: 1250px;
+    margin: 0 auto;
     height: 450px;
-    background-color: #fff;
+    padding: 3rem 2rem;
+    background-color: #ffffff;
     border-radius: 10px;
-    padding-left: 10px;
-    margin-left: 30px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
-.Man-Img {
-    width: 40px;
-    height: 60px;
-    padding-top: 2.9rem;
-    padding-left: 6rem;
+.CustomSection .Man-Img {
+    width: 300px;
+    height: auto;
+    padding: 0;
+    margin-left: 50px;
+    object-fit: contain;
 }
 
-.SSection-content {
+.CustomSection .SSection-content {
+    flex: 1 1 600px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 3rem 2rem 0 2rem;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #000;
+    justify-content: center;
+    align-items: center; /* Center horizontally */
+    text-align: left; /* Center text */
+    gap: 1rem; /* Add consistent spacing between elements */
+    padding: 1rem;
 }
 
-.s-title {
-    position: absolute;
-    top: 120px;
-    left: 50%;
-    padding-right: 230px;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 26px;
-    line-height: 40px;
+.CustomSection .s-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    margin: 0 auto 1.4rem 4.5rem;
     color: #111010;
 }
 
-.s-par {
-    position: absolute;
-    top: 220px;
-    left: 43%;
-    padding-right: 100px;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+.CustomSection .s-par {
+    font-size: 14px;
     line-height: 25px;
+    margin-bottom: 0rem;
+    margin-left: 2rem;
     color: #000;
-}
-
-.s-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 130px;
-    height: 45px;
-    top: 350px;
-    left: 60%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+}
+
+.CustomSection .s-btn {
+    width: 115px;
+    padding: 15px 5px;
+    font-size: 14px;
     font-weight: 500;
-    line-height: 25px;
+    line-height: 10px;
     background-color: #9eebf8;
     border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) { /* For tablets and smaller devices */
-    .SSection-container {
-        top: 200px;
-        width: 90%;
-        margin-left: 20px;
-        height: auto; /* Allow height to adjust */
-        padding: 20px;
+@media (max-width: 1024px) {
+    .CustomSection .SSection-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 2rem 1rem;
+        top:0;
+        height: auto;
+        position: relative;
+
     }
 
-    .s-title {
-        top: 100px;
-        left: 50%;
-        font-size: 22px; /* Reduce font size */
-        padding-right: 150px;
+    .CustomSection .SSection-content {
+        align-items: flex-center;
+        text-align: left;
+        position: relative;
+        top: -70px;
+        left: -20px;
     }
 
-    .s-par {
-        top: 180px;
-        left: 40%;
-        font-size: 14px; /* Adjust font size */
-        padding-right: 80px;
-    }
-
-    .s-btn {
-        top: 300px;
-        left: 50%;
-        transform: translateX(-50%); /* Center the button */
-    }
+    .CustomSection .Man-Img {
+        position: relative;
+        left: -165px;
+        max-width: 50px;
+      }
 }
 
-@media (max-width: 768px) { /* For mobile devices */
-    .SSection-container {
-        top: 150px;
-        width: 100%;
-        margin-left: 0;
-        padding: 15px;
+@media (max-width: 768px) {
+    .CustomSection .s-title {
+        font-size: 20px;
     }
 
-    .Man-Img {
-        width: 30px; /* Reduce image size */
-        height: 50px;
-        padding-top: 2rem;
-        padding-left: 4rem;
-    }
-
-    .s-title {
-        top: 80px;
-        left: 50%;
-        font-size: 20px; /* Further reduce font size */
-        padding-right: 100px;
-    }
-
-    .s-par {
-        top: 150px;
-        left: 35%;
-        font-size: 12px; /* Adjust font size */
-        padding-right: 50px;
-    }
-
-    .s-btn {
-        top: 250px;
-        left: 50%;
-        transform: translateX(-50%); /* Center the button */
-        width: 120px; /* Adjust button size */
-        height: 40px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) { /* For very small screens */
-    .SSection-container {
-        top: 100px;
-        width: 100%;
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .Man-Img {
-        width: 25px; /* Further reduce image size */
-        height: 40px;
-        padding-top: 1.5rem;
-        padding-left: 3rem;
-    }
-
-    .s-title {
-        top: 60px;
-        left: 50%;
-        font-size: 18px; /* Further reduce font size */
-        padding-right: 50px;
-    }
-
-    .s-par {
-        top: 120px;
-        left: 30%;
-        font-size: 10px; /* Adjust font size */
-        padding-right: 30px;
-    }
-
-    .s-btn {
-        top: 200px;
-        left: 50%;
-        transform: translateX(-50%); /* Center the button */
-        width: 100px; /* Adjust button size */
-        height: 35px;
+    .CustomSection .s-par {
         font-size: 12px;
+    }
+
+    .CustomSection .s-btn {
+        width: 120px;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .CustomSection .Man-Img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .CustomSection .Man-Img {
+        width: 160px;
+    }
+
+    .CustomSection .s-title {
+        font-size: 18px;
+    }
+
+    .CustomSection .s-par {
+        font-size: 10px;
+    }
+
+    .CustomSection .s-btn {
+        width: 100px;
+        font-size: 12px;
+        padding: 10px;
     }
 }

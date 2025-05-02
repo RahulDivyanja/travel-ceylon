@@ -7,12 +7,15 @@
 
 /* ===== LAYOUT BASE STYLES ===== */
 .stays-body {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 /* ===== HEADER ===== */
@@ -24,6 +27,7 @@
   margin: 0 auto;
   background: url("./assets/staysHeader.png") no-repeat center center / cover;
   position: relative;
+
 }
 
 /* ===== NAVIGATION ===== */
@@ -80,8 +84,9 @@
 .nav-center,
 .stays-filter-nav-center {
   position: absolute;
-  left: 50%;
+  left: 50%; 
   transform: translateX(-50%);
+
   text-align: center;
 }
 
@@ -107,7 +112,7 @@
 
 .profile-name,
 .stays-filter-profile-name {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: white;
 }
@@ -135,16 +140,16 @@
 }
 
 .text-content {
-  max-width: 700px;
+  max-width: 400px;
   text-align: left;
 }
 
 .main-heading {
-  font-size: 3.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: white;
   margin-bottom: 1rem;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .sub-heading {
@@ -157,9 +162,9 @@
 .selaction-area,
 .stays-filter-selection-area {
   display: flex;
-  margin: 120px auto 50px;
+  margin: 0px auto 50px;
   width: 90%;
-  min-height: 160px;
+  min-height: 150px;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
@@ -169,7 +174,7 @@
 .selaction-area h3,
 .stays-filter-selection-area h3 {
   font-family: "Montserrat", sans-serif;
-  padding: 30px;
+  /* padding: 10px; */
   font-size: 15px;
   font-weight: bold;
   color: rgb(44, 43, 43);
@@ -179,17 +184,17 @@
 .stays-card {
   display: flex;
   position: relative;
-  top: 520px;
+  top: -25%;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 20px;
-  padding: 20px;
+  padding: 28px;
 }
 
 /* ===== TITLES ===== */
 .section-title,
 .offer-title1 {
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   padding-bottom: 10px;
@@ -198,7 +203,7 @@
 
 .section-subtitle,
 .offer-subtitle1 {
-  font-size: 1.125rem;
+  font-size: 1.0rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   text-align: left;
@@ -210,16 +215,36 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  top: 310px;
+  top: -35%;
   margin-left: 27px;
+
 }
 
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
+  .stays-body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+  }
   .stays-header {
     height: 70vh;
     padding: 20px;
+  }
+  .stays-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  .nav-right{
+    padding-top: 10px;
   }
 
   .text-overlay-container {
@@ -236,22 +261,25 @@
   }
 
   .stays-card {
-    top: 200px;
-    gap: 15px;
+    gap: 20px;
     padding: 15px;
   }
 
   .selaction-area,
   .stays-filter-selection-area {
-    margin-top: 40px;
+    margin-top: 0px;
   }
 
   .offer-section {
-    margin-top: 460px;
+    margin-top: 0;
+    top: -210px;
+    margin-bottom: 130px;
   }
 }
 
 @media (max-width: 768px) {
+  
+
   .stays-header {
     height: 60vh;
     padding: 15px;
@@ -282,7 +310,8 @@
   }
 
   .stays-card {
-    top: 150px;
+    position: relative;
+    top: 0px;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
@@ -324,6 +353,7 @@
 }
 
 @media (max-width: 480px) {
+
   .stays-header {
     height: 50vh;
   }
@@ -365,8 +395,8 @@
   }
 
   .stays-card {
-    top: 120px;
-    gap: 15px;
+    top: -80px;
+    gap: 40px;
   }
 
   .section-title,

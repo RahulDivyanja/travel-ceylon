@@ -4,6 +4,7 @@ import "./Search_Section.css";
 const Search_Section = () => {
   return (
     <>
+    <div className="CustomSection">
     <div className='SSection-container'>
         <div className='Man-Img'>
             <img src="../src/assets/Stays/Search_Man.png" alt="Image" />
@@ -17,6 +18,7 @@ const Search_Section = () => {
                 <button className='s-btn'>Search Hotel</button>
             </div>
         </div>
+    </div>
     </div>
 
     </>

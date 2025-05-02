@@ -119,7 +119,7 @@ export default function DestinationFilter() {
 
         {/* Rooms & Guests Dropdown */}
         <div className="form-group rooms-guests-group" ref={roomsGuestsRef}>
-          <span className="form-label">Rooms & Guests</span>
+          <span className="guest-label">Rooms & Guests</span>
           <button
             type="button"
             onClick={() => setRoomsGuestsOpen((v) => !v)}
@@ -171,7 +171,7 @@ export default function DestinationFilter() {
               </div>
 
               <div className="dropdown-item">
-                <span className="dropdown-label">Guests</span>
+                <span className="dropdown-label">Guest</span>
                 <div className="counter">
                   <button
                     type="button"

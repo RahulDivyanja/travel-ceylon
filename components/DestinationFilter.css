@@ -7,14 +7,13 @@
 
 .containerDF {
   display: flex;
-  position: absolute;
-  top: 300px;
-  left: 50px;
-  justify-content: flex-start;
+  position: relative;
+  top: 10px;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
-  padding: 2rem 0;
+  height: 300px;
+  min-height:100vh;
 }
 
 .filter-form {
@@ -26,7 +25,7 @@
   border-radius: 01rem;
   box-shadow: 0 4px 16px rgba(11, 24, 21, 0.555);
   width: 92%;
-  /* max-width: 1200px; */
+  max-width: 1200px;
   padding: 1.5rem;
   position: relative;
 }
@@ -37,10 +36,12 @@
   width: 100%;
   color: #4b5563;
   font-weight: 600;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
   user-select: none;
   font-family: inherit;
+  position: relative;
+  bottom: -20px;
 }
 
 .form-group {
@@ -48,17 +49,17 @@
   flex-direction: column;
   color: #4b5563;
   font-size: 1rem;
-  min-width: 250px;
+  min-width: 200px;
   flex: 1 1 220px;
 }
 
 .destination-group {
-  max-width: 320px;
+  max-width: 300px;
   flex: 2 1 320px;
 }
 
 .date-group {
-  max-width: 320px;
+  max-width: 300px;
   flex: 1 1 180px;
 }
 
@@ -72,11 +73,20 @@
   display: flex;
   justify-content: flex-start;
   margin-bottom: 0.25rem;
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   font-weight: 500;
   font-family: inherit;
 }
-
+.guest-label{
+  display: flex;
+  position: relative;
+  top: 30px;
+  justify-content: flex-start;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+}
 .input-wrapper {
   display: flex;
   align-items: center;
@@ -92,7 +102,7 @@
 .left-icon {
   width: 35px;
   height: 35px;
-  margin-right: 8px;
+  margin-right:8px;
   flex-shrink: 0;
 }
 
@@ -102,7 +112,7 @@
   background: transparent;
   border: none;
   outline: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #374151;
   font-family: inherit;
   padding: 0;
@@ -160,7 +170,7 @@
   padding: 0.5rem 0.75rem;
   background: #fff;
   color: #374151;
-  font-size: 1rem;
+  font-size: 0.875rem;
   cursor: pointer;
   width: 100%;
   user-select: none;
@@ -210,13 +220,18 @@
 
 .dropdown-label {
   color: #374151;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  position: relative;
+  left: 10px;
+
 }
 
 .counter {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  position: relative;
+  right: 30px;
 }
 
 .counter-btn {
@@ -234,6 +249,9 @@
   justify-content: center;
   align-items: center;
   transition: background 0.2s;
+  position: relative;
+  bottom: 14px;
+  padding: 1px;
 }
 
 .counter-btn:hover {
@@ -258,12 +276,12 @@
   background: #8bc9b1;
   color: #111827;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.875rem;
   border-radius: 0.375rem;
   padding: 0.5rem 1.5rem;
   margin-top: 1rem;
   border: none;
-  cursor: pointer;
+  cursor: pointer; 
   transition: background 0.2s;
   position: relative;
   z-index: 1;
@@ -276,12 +294,25 @@
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
+  .containerDF {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+    height: auto;
+    position: relative;
+    left: 40px;
+  }
   .filter-form {
     flex-direction: column;
     align-items: stretch;
     gap: 1.5rem;
     padding: 1rem;
     width: 98vw;
+    position: relative;
+    left:-50px;
+    top: -30px;
   }
   .form-group,
   .destination-group,
@@ -293,5 +324,6 @@
   }
   .search-btn-container {
     justify-content: center;
+    margin-left: 3.5rem;
   }
 }

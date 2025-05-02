@@ -3,11 +3,11 @@ import"./Offer_cards.css"
 
 const Cards_component = ({icon,title,description})=>{
     return(
-        <div className='card'>
-            <img src={icon} alt="offer" className='offer_img'/>
-            <div className='offer_details'>
-                <h2 className='offer-title'>{title}</h2>
-                <p className='offer-description'>{description}</p>
+        <div className='stays-Ocard'>
+            <img src={icon} alt="offer" className='stays-offer_img'/>
+            <div className='stays-offer_details'>
+                <h2 className='stays-offer-title'>{title}</h2>
+                <p className='stays-offer-description'>{description}</p>
             </div>
         </div>
     )
@@ -38,7 +38,7 @@ const cards_data=[
 ]
 const Offer_cards = () => {
   return (
-    <div className='offer-container'>
+    <div className='stays-offer-container'>
         {cards_data.map((card, index) => (
             <Cards_component
                 key={index}

@@ -1,74 +1,59 @@
-/* Hotel Carousel Container */
+/* === Hotel Carousel Container === */
 .hotel-carousel-container {
+  position: relative;
   width: 100%;
-  padding: 24px 0;
-  padding-top: 35px;
+  height: 670px;
+  margin-top: -12%;
+  
+
 }
 
 .carousel-wrapper {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
-  height: 800px;
+  height: 100%;
 }
 
 .carousel-content {
   position: relative;
-  height: 100%;
-}
-
-.carousel-content.vertical {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   height: 100%;
+  overflow: hidden;
 }
 
-/* Carousel Track */
+/* === Carousel Track (Scrollable Area) === */
 .carousel-track {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 16px;
-  padding-bottom: 16px;
+  padding: 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
-}
-
-.carousel-track.vertical {
-  flex-direction: column;
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100%;
-  padding-right: 16px;
-  padding-bottom: 0;
 }
 
 .carousel-track::-webkit-scrollbar {
   display: none;
 }
 
-/* Hotel Card */
+/* === Hotel Card === */
 .hotel-card {
   flex-shrink: 0;
-  width: 300px;
-  height: 450px;
-  margin: 0 8px;
-  border-radius: 8px;
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.541);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.54);
   background-size: cover;
   background-position: center;
 }
 
-.carousel-track.vertical .hotel-card {
-  margin: 8px 0;
-  width: 100%;
-}
-
 .hotel-info {
   position: absolute;
-  bottom: 50px;
+  bottom: 55px;
   left: 0;
   right: 0;
   padding: 16px;
@@ -76,32 +61,28 @@
 }
 
 .hotel-info h3 {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
   margin: 0;
 }
 
 .hotel-info p {
-  display: flex;
-  justify-content: flex-start;
   font-size: 14px;
   margin: 4px 0 0;
 }
 
-/* Book Now Button */
+/* === Book Now Button === */
 .book-now-btn {
   position: absolute;
   bottom: 16px;
-  left: 50px;
+  left: 23px;
   width: 200px;
   background-color: #a7e8d0;
   color: #333;
   padding: 8px 16px;
   border-radius: 6px;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -111,82 +92,61 @@
   background-color: #8edfc0;
 }
 
-/* Scroll Buttons */
-.scroll-btn {
-  position: relative;
-  background-color: white;
+/* === Scroll Buttons === */
+.stays-scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
   border: none;
-  border-radius: 50%;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.226);
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  z-index: 10;
   transition: background-color 0.2s;
+  padding: 0; /* Remove default padding */
+  top: 300px;
 }
 
-.scroll-btn:hover {
-  background-color: #f5f5f5;
+.stays-scroll-btn svg {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 
-.scroll-btn.disabled {
+.stays-scroll-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.stays-scroll-btn.disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.scroll-up {
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  border: none;
-  border-radius: 50%;
-  justify-content: center;
-  position: relative;
-  top: -270px;
-  left: 100%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
+.stays-scroll-left {
+  left: 10px;
 }
 
-.scroll-down {
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  border: none;
-  border-radius: 50%;
-  position: relative;
-  bottom: -240px;
-  left: 0%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  
+.stays-scroll-right {
+  right: 10px;
 }
-
-/* Responsive Styles */
+/* === Responsive Styles === */
 @media (max-width: 1024px) {
-  .carousel-wrapper {
+  .hotel-carousel-container {
+    position: relative;
+    top: 50%;
+    width: 100%;
     height: auto;
   }
 
   .hotel-card {
-    width: 260px;
+    width: 200px;
     height: 400px;
-  }
-
-  .hotel-info h3 {
-    font-size: 24px;
-  }
-
-  .hotel-info p {
-    font-size: 13px;
   }
 
   .book-now-btn {
@@ -199,21 +159,17 @@
 @media (max-width: 768px) {
   .carousel-track {
     gap: 12px;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 2.5rem 2rem 2.5rem;
+    width: 100%;
   }
 
   .hotel-card {
+    position:relative;
+    top: 40px;
     width: 90%;
     height: 380px;
     margin: 0 auto;
-  }
-
-  .hotel-info h3 {
-    font-size: 20px;
-  }
-
-  .hotel-info p {
-    font-size: 12px;
+    margin-bottom: 40px;
   }
 
   .book-now-btn {
@@ -222,7 +178,7 @@
     left: 30px;
   }
 
-  .scroll-btn {
+  .stays-scroll-btn {
     width: 36px;
     height: 36px;
   }
@@ -238,17 +194,13 @@
     padding: 12px;
   }
 
-  .hotel-info h3 {
-    font-size: 18px;
-  }
-
   .book-now-btn {
     width: 140px;
     font-size: 12px;
     left: 20px;
   }
 
-  .scroll-btn {
+  .stays-scroll-btn {
     width: 32px;
     height: 32px;
   }

@@ -1,11 +1,15 @@
-import { useState, useRef, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import './TopHotel_cards.css';
+import { useState, useRef, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import "./TopHotel_cards.css";
 
 // HotelCard Component
 const HotelCard = ({ name, location, image }) => {
   return (
-    <div className="hotel-card" style={{ backgroundImage: `url(${image || "/api/placeholder/400/320"})` }}>
+    <div
+      className="hotel-card"
+      style={{ backgroundImage: `url(${image || "/api/placeholder/400/320"})` }}
+    >
       <div className="hotel-info">
         <h3>{name}</h3>
         <p>{location}</p>
@@ -24,12 +28,42 @@ const TopHotelCards = () => {
 
   // Sample hotel data
   const hotels = [
-    { id: 1, name: "The Grand Serenity", location: "Mirissa", image: "../src/assets/Stays-Card/StaysCard1.png" },
-    { id: 2, name: "Onyx Towers", location: "Hikkaduwa", image: "../src/assets/Stays-Card/StaysCard2.png" },
-    { id: 3, name: "The Celestia", location: "Hikkaduwa", image: "../src/assets/Stays-Card/StaysCard3.png" },
-    { id: 4, name: "AruGamBAY", location: "Arugambay", image: "../src/assets/Stays-Card/StaysCard4.png" },
-    { id: 5, name: "Palm Paradise", location: "Kandy", image: "../src/assets/Stays-Card/StaysCard5.png" },
-    { id: 6, name: "Azure Heights", location: "Colombo", image: "../src/assets/Stays-Card/StaysCard6.png" },
+    {
+      id: 1,
+      name: "The Grand Serenity",
+      location: "Mirissa",
+      image: "../src/assets/Stays-Card/StaysCard1.png",
+    },
+    {
+      id: 2,
+      name: "Onyx Towers",
+      location: "Hikkaduwa",
+      image: "../src/assets/Stays-Card/StaysCard2.png",
+    },
+    {
+      id: 3,
+      name: "The Celestia",
+      location: "Hikkaduwa",
+      image: "../src/assets/Stays-Card/StaysCard3.png",
+    },
+    {
+      id: 4,
+      name: "AruGamBAY",
+      location: "Arugambay",
+      image: "../src/assets/Stays-Card/StaysCard4.png",
+    },
+    {
+      id: 5,
+      name: "Palm Paradise",
+      location: "Kandy",
+      image: "../src/assets/Stays-Card/StaysCard5.png",
+    },
+    {
+      id: 6,
+      name: "Azure Heights",
+      location: "Colombo",
+      image: "../src/assets/Stays-Card/StaysCard6.png",
+    },
   ];
 
   // Update scroll metrics when component mounts and when window resizes
@@ -39,24 +73,28 @@ const TopHotelCards = () => {
         const scrollWidth = scrollRef.current.scrollWidth;
         const clientWidth = scrollRef.current.clientWidth;
         const newMaxScroll = scrollWidth - clientWidth;
-        
+
         setMaxScroll(newMaxScroll);
         setIsScrollable(newMaxScroll > 0);
-        console.log("Scroll metrics updated:", { scrollWidth, clientWidth, newMaxScroll });
+        console.log("Scroll metrics updated:", {
+          scrollWidth,
+          clientWidth,
+          newMaxScroll,
+        });
       }
     };
 
     // Initial update
     updateMetrics();
-    
+
     // Add listener for window resize
-    window.addEventListener('resize', updateMetrics);
-    
+    window.addEventListener("resize", updateMetrics);
+
     // Add a delayed update for images loading
     const timer = setTimeout(updateMetrics, 500);
-    
+
     return () => {
-      window.removeEventListener('resize', updateMetrics);
+      window.removeEventListener("resize", updateMetrics);
       clearTimeout(timer);
     };
   }, []);
@@ -64,18 +102,18 @@ const TopHotelCards = () => {
   // Scroll handlers - using direct DOM manipulation for reliability
   const scroll = (direction) => {
     if (!scrollRef.current || !isScrollable) return;
-    
+
     const cardWidth = 336; // Card width (320px) + gap (16px)
-    
-    if (direction === 'left') {
+
+    if (direction === "left") {
       scrollRef.current.scrollBy({
         left: -cardWidth,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     } else {
       scrollRef.current.scrollBy({
         left: cardWidth,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -97,7 +135,7 @@ const TopHotelCards = () => {
         scrollWidth: scrollRef.current.scrollWidth,
         clientWidth: scrollRef.current.clientWidth,
         maxScroll: maxScroll,
-        isScrollable: isScrollable
+        isScrollable: isScrollable,
       });
     }
   };
@@ -107,25 +145,26 @@ const TopHotelCards = () => {
       <div className="carousel-wrapper">
         <div className="carousel-content">
           {/* Left scroll button */}
-          <button 
-            onClick={() => scroll('left')}
+          <button
+            onClick={() => scroll("left")}
             disabled={scrollPosition <= 0}
-            className={`scroll-btn scroll-down ${!isScrollable || scrollPosition <= 0 ? 'disabled' : ''}`}
+            className={`stays-scroll-btn stays-scroll-left ${
+              scrollPosition <= 0 ? "disabled" : ""
+            }`}
             aria-label="Scroll left"
-            data-testid="scroll-left-btn"
           >
-            <ChevronLeft size={30} />
+            <ChevronLeft size={24} color="#000" />
           </button>
 
           {/* Carousel container */}
-          <div 
+          <div
             ref={scrollRef}
             className="carousel-track"
             onScroll={handleScroll}
             data-testid="carousel-track"
           >
-            {hotels.map(hotel => (
-              <HotelCard 
+            {hotels.map((hotel) => (
+              <HotelCard
                 key={hotel.id}
                 name={hotel.name}
                 location={hotel.location}
@@ -135,21 +174,19 @@ const TopHotelCards = () => {
           </div>
 
           {/* Right scroll button */}
-          <button 
-            onClick={() => scroll('right')}
+          <button
+            onClick={() => scroll("right")}
             disabled={scrollPosition >= maxScroll}
-            className={`scroll-btn scroll-up ${!isScrollable || scrollPosition >= maxScroll ? 'disabled' : ''}`}
+            className={`stays-scroll-btn stays-scroll-right ${
+              scrollPosition >= maxScroll ? "disabled" : ""
+            }`}
             aria-label="Scroll right"
-            data-testid="scroll-right-btn"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={24} color="#000" />
           </button>
-
-      
         </div>
       </div>
     </div>
   );
 };
-
 export default TopHotelCards;

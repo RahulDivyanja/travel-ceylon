@@ -2,8 +2,7 @@
 
 .stays-review-container {
     position: relative;
-    bottom: -320px;
-    left: -2%;
+    top: -150px;
     width: 100%;
     max-width: 1250px;
     margin: 0 auto;
@@ -17,7 +16,7 @@
   
   .review-title {
     text-align: left;
-    font-size: 34px;
+    font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
@@ -25,7 +24,7 @@
   
   .review-subtitle {
     text-align: left;
-    font-size: 16px;
+    font-size: 1rem;
     color: #666;
     margin: 0;
   }
@@ -35,7 +34,7 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 10px 0;
-    padding-left: 40px;
+    padding-left: 20px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     gap: 40px;
@@ -110,7 +109,7 @@
   
   .star {
     color: #ddd;
-    font-size: 30px;
+    font-size: 25px;
     margin-right: 2px;
   }
   
@@ -121,6 +120,7 @@
   .add-review-btn-container {
     display: flex;
     justify-content: flex-end;
+    margin-top: -30px;
   }
   
   .add-review-btn {
@@ -242,6 +242,10 @@
   }
   
   @media (max-width: 768px) {
+    .stays-review-container{
+      position: relative;
+      top: -320px;
+    }
     .review-card {
       width: 280px;
     }
