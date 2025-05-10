@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .taxi-five-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .taxi-five-entry-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8dd3bb;
+    background-image: url('/assets/backgroundill.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 0;
+    z-index: 1;
+  }
+  
+  .taxi-five-progressbar {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-top: 0;
+  }
+  
+  .taxi-five-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 10px;
+  }
+  
+  .taxi-five-tag-line {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .taxi-five-upload-box {
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .taxi-five-upload-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    opacity: 70%;
+  }
+  
+  .taxi-five-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .taxi-five-upload-box .main-line {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  .taxi-five-upload-box .second-line {
+    font-size: 10px;
+    text-align: center;
+    color: #757575;
+    margin-top: 0;
+  }
+  
+  .taxi-five-preview-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .taxi-five-preview-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .taxi-five-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .taxi-five-remove-btn {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: #212121;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+  
+  .taxi-five-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0px;
+  }
+  
+  .taxi-five-back-btn,
+  .taxi-five-next-btn {
+    background-color: #8dd3bb;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .taxi-five-back-btn {
+    margin-right: 30px;
+  }
+  
+  .taxi-five-back-btn:hover,
+  .taxi-five-next-btn:hover {
+    opacity: 70%;
+  }
+  
+  .taxi-five-next-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 480px) {
+    .taxi-five-container {
+      padding: 24px;
+    }
+    
+    .taxi-five-preview-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
