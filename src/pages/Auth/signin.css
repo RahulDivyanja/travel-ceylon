@@ -210,3 +210,23 @@ input {
 .signin-button:hover{
   opacity: 70%;
 }
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    width: 100vh;
+    height: 100vw;
+    margin-top: 250px;
+    margin: 0;
+    
+  }
+
+  .signin-left{
+    width: auto;
+    margin-bottom: 60px;
+  }
+ form{
+  padding: 20px;
+ }
+  
+}

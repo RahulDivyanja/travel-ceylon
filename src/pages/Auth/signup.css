@@ -221,7 +221,9 @@ input {
     height: 100%;
     margin-top: 250px;
   }
-
+ form{
+  padding: 20px;
+ }
   .main-logo{
     height:30px;
   }
@@ -237,7 +239,8 @@ input {
     font-size: 12px;
     margin-top: 30px;
 }
-.signup-entryarea{
-    width: 200px;
+.sign-in-container{
+  padding: 20px;
 }
-}/*signin eke resposive hadanna*/
+
+}
