@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Progressbar from "../../../../components/progressbar";
 import "./guide-four.css";
+import SuccessMessage from "../../../../components/SuccessMessage";
 
 function GuideStepFour() {
   const navigate = useNavigate();
   const [description, setDescription] = useState("");
   const [agreed, setAgreed] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
+  const handleFinish = () => {
+    setShowSuccess(true);
+  };
   return (
     <div className="guide-four-wrapper">
       <div className="guide-four-entry-container">
@@ -41,8 +46,8 @@ function GuideStepFour() {
               Back
             </button>
             <button 
-              className="guide-four-next-btn" 
-              onClick={() => navigate("/dashboard")}
+              className="finish-btn" 
+              onClick={handleFinish}
               disabled={!agreed || description.trim().length === 0}
             >
               Finish
@@ -50,7 +55,26 @@ function GuideStepFour() {
           </div>
         </div>
       </div>
+      {showSuccess && (
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: "rgba(0,0,0,0.4)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          zIndex: 9999,
+        }}
+      >
+        <SuccessMessage />
+      </div>
+    )}
     </div>
+  
   );
 }
 
