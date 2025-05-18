@@ -1,20 +1,19 @@
 import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import "./TopHotel_cards.css";
+import styles from "./TopHotel_cards.module.css";
 
 // HotelCard Component
 const HotelCard = ({ name, location, image }) => {
   return (
     <div
-      className="hotel-card"
+      className={styles.hotelCard}
       style={{ backgroundImage: `url(${image || "/api/placeholder/400/320"})` }}
     >
-      <div className="hotel-info">
+      <div className={styles.hotelInfo}>
         <h3>{name}</h3>
         <p>{location}</p>
       </div>
-      <button className="book-now-btn">Book Now</button>
+      <button className={styles.bookNowBtn}>Book Now</button>
     </div>
   );
 };
@@ -76,11 +75,6 @@ const TopHotelCards = () => {
 
         setMaxScroll(newMaxScroll);
         setIsScrollable(newMaxScroll > 0);
-        console.log("Scroll metrics updated:", {
-          scrollWidth,
-          clientWidth,
-          newMaxScroll,
-        });
       }
     };
 
@@ -123,33 +117,19 @@ const TopHotelCards = () => {
     if (scrollRef.current) {
       const newPosition = scrollRef.current.scrollLeft;
       setScrollPosition(newPosition);
-      console.log("Scrolled to:", newPosition);
-    }
-  };
-
-  // Debug button for troubleshooting
-  const debugScroll = () => {
-    if (scrollRef.current) {
-      console.log({
-        scrollLeft: scrollRef.current.scrollLeft,
-        scrollWidth: scrollRef.current.scrollWidth,
-        clientWidth: scrollRef.current.clientWidth,
-        maxScroll: maxScroll,
-        isScrollable: isScrollable,
-      });
     }
   };
 
   return (
-    <div className="hotel-carousel-container">
-      <div className="carousel-wrapper">
-        <div className="carousel-content">
+    <div className={styles.hotelCarouselContainer}>
+      <div className={styles.carouselWrapper}>
+        <div className={styles.carouselContent}>
           {/* Left scroll button */}
           <button
             onClick={() => scroll("left")}
             disabled={scrollPosition <= 0}
-            className={`stays-scroll-btn stays-scroll-left ${
-              scrollPosition <= 0 ? "disabled" : ""
+            className={`${styles.staysScrollBtn} ${styles.staysScrollLeft} ${
+              scrollPosition <= 0 ? styles.disabled : ""
             }`}
             aria-label="Scroll left"
           >
@@ -159,9 +139,8 @@ const TopHotelCards = () => {
           {/* Carousel container */}
           <div
             ref={scrollRef}
-            className="carousel-track"
+            className={styles.carouselTrack}
             onScroll={handleScroll}
-            data-testid="carousel-track"
           >
             {hotels.map((hotel) => (
               <HotelCard
@@ -177,8 +156,8 @@ const TopHotelCards = () => {
           <button
             onClick={() => scroll("right")}
             disabled={scrollPosition >= maxScroll}
-            className={`stays-scroll-btn stays-scroll-right ${
-              scrollPosition >= maxScroll ? "disabled" : ""
+            className={`${styles.staysScrollBtn} ${styles.staysScrollRight} ${
+              scrollPosition >= maxScroll ? styles.disabled : ""
             }`}
             aria-label="Scroll right"
           >
@@ -189,4 +168,5 @@ const TopHotelCards = () => {
     </div>
   );
 };
+
 export default TopHotelCards;

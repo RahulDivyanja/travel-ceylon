@@ -4,7 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+.content-wrap {
+  flex: 1; /* Fills space between header and footer */
+}
 /* ===== LAYOUT BASE STYLES ===== */
 .stays-body {
   position: relative;
@@ -20,8 +27,7 @@
 
 /* ===== HEADER ===== */
 .stays-header {
-  width: 100vw;
-  max-width: 100vw;
+  width:100%;
   height: 90vh;
   padding: 30px 30px 0;
   margin: 0 auto;
@@ -219,7 +225,64 @@
   margin-left: 27px;
 
 }
+.footer-section {
+  position: relative;
+  width: 100%;
+  z-index: 50;
+  /* These two properties ensure the footer stays at the bottom */
+  margin-top: -50px; /* Adjust as needed to control overlap with content */
+  clear: both; /* Ensures the footer clears any floated elements */
+}
 
+/* Adjust the footer styles slightly */
+.footer-section {
+  width: 100vw; /* Full viewport width */
+  margin-left: calc(-50vw + 50%); /* Offset from center to expand full width */
+  position: relative;
+  z-index: 50;
+}
+
+.stays-body .footer {
+  width: 100%;
+  min-height: 330px;
+  display: grid;
+  grid-template-columns: 30% repeat(4, 1fr);
+  background-color: #8DD3BB;
+  border-radius: 0; /* Remove border radius from top for full-width appearance */
+  padding: 4rem 4rem 3rem;
+  margin: 0; /* Reset any margins */
+}
+
+/* If you still need the rounded top corners but want full width at bottom */
+.footer-inner {
+  max-width: 1200px; /* Or your site's content width */
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Responsive settings for footer */
+@media (max-width: 1024px) {
+  .footer {
+    grid-template-columns: 1fr 1fr; /* Adjust to two columns */
+    padding: 3rem 2rem;
+    height: auto;
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr; /* Stack items in a single column */
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {

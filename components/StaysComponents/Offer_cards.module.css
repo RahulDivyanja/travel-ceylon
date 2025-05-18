@@ -1,0 +1,109 @@
+.staysOfferContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 3rem;
+  padding: 0;
+  padding-top: 55px;
+  padding-bottom: 20px;
+  background-color: #f7f7f7ad;
+}
+
+.staysOcard {
+  background-color: #c7f7e4;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  width: 270px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.staysOcard:hover {
+  transform: translateY(-5px);
+}
+
+.staysOfferImg {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  padding-top: 20px;
+}
+
+.staysOfferDetails {
+  font-size: 13px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.staysOfferTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.staysOfferDescription {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .staysOfferContainer {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .staysOcard {
+    width: 220px;
+    padding: 1rem;
+  }
+
+  .staysOfferTitle {
+    font-size: 20px;
+  }
+
+  .staysOfferDescription {
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .staysOfferContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    position: relative;
+    margin-bottom: 10%;
+  }
+
+  .staysOcard {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .staysOfferImg {
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+  }
+
+  .staysOfferTitle {
+    font-size: 15px;
+  }
+
+  .staysOfferDescription {
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

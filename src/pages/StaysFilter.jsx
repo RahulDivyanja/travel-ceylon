@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../StaysUser.css"; // Updated CSS file for unique styles
+import "../StaysUser.module.css"; // Updated CSS file for unique styles
 import VectorIcon from "../assets/VectorBlack.png";
 import TaxiIcon from "../assets/taxi_alertBlack.svg";
 import ShareLocation from "../assets/share_locationBlack.svg";

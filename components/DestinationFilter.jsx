@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./DestinationFilter.css";
+import styles from "./DestinationFilter.module.css";
 import bedIcon from "../src/assets/bed-icon.svg";
 import calendarIcon from "../src/assets/calendar_month.svg";
 import containerIcon from "../src/assets/container.svg";
@@ -63,19 +63,19 @@ export default function DestinationFilter() {
   };
 
   return (
-    <div className="containerDF">
-      <form action={buildSearchUrl()} method="GET" className="filter-form">
-        <h2 className="form-title">Find your Perfect Destination</h2>
+    <div className={styles.containerDF}>
+      <form action={buildSearchUrl()} method="GET" className={styles.filterForm}>
+        <h2 className={styles.formTitle}>Find your Perfect Destination</h2>
 
         {/* Destination Select */}
-        <label className="form-group destination-group">
-          <span className="form-label">Destination</span>
-          <div className="input-wrapper">
-            <img src={bedIcon} alt="Bed Icon" className="left-icon" />
+        <label className={`${styles.formGroup} ${styles.destinationGroup}`}>
+          <span className={styles.formLabel}>Destination</span>
+          <div className={styles.inputWrapper}>
+            <img src={bedIcon} alt="Bed Icon" className={styles.leftIcon} />
             <select
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
-              className="input-select"
+              className={styles.inputSelect}
               aria-label="Destination select"
             >
               {destinations.map((dest) => (
@@ -86,13 +86,12 @@ export default function DestinationFilter() {
         </label>
 
         {/* Check-in Date */}
-        <label className="form-group date-group">
-          <span className="form-label">Check In</span>
-          <div className="input-wrapper">
-            {/* <img src={calendarIcon} alt="Calendar Icon" className="left-icon" /> */}
+        <label className={`${styles.formGroup} ${styles.dateGroup}`}>
+          <span className={styles.formLabel}>Check In</span>
+          <div className={styles.inputWrapper}>
             <input
               type="date"
-              className="input-date"
+              className={styles.inputDate}
               value={checkIn}
               onChange={e => setCheckIn(e.target.value)}
               min={new Date().toISOString().split("T")[0]}
@@ -102,13 +101,12 @@ export default function DestinationFilter() {
         </label>
 
         {/* Check-out Date */}
-        <label className="form-group date-group">
-          <span className="form-label">Check Out</span>
-          <div className="input-wrapper">
-            {/* <img src={calendarIcon} alt="Calendar Icon" className="left-icon" /> */}
+        <label className={`${styles.formGroup} ${styles.dateGroup}`}>
+          <span className={styles.formLabel}>Check Out</span>
+          <div className={styles.inputWrapper}>
             <input
               type="date"
-              className="input-date"
+              className={styles.inputDate}
               value={checkOut}
               onChange={e => setCheckOut(e.target.value)}
               min={checkIn || new Date().toISOString().split("T")[0]}
@@ -118,51 +116,49 @@ export default function DestinationFilter() {
         </label>
 
         {/* Rooms & Guests Dropdown */}
-        <div className="form-group rooms-guests-group" ref={roomsGuestsRef}>
-          <span className="guest-label">Rooms & Guests</span>
+        <div className={styles.roomsGuestsGroup} ref={roomsGuestsRef}>
+          <span className={styles.guestLabel}>Rooms & Guests</span>
           <button
             type="button"
             onClick={() => setRoomsGuestsOpen((v) => !v)}
-            className="dropdown-toggle"
+            className={styles.dropdownToggle}
             aria-haspopup="true"
             aria-expanded={roomsGuestsOpen}
             aria-label="Rooms and guests selection dropdown"
-            style={{ display: "flex", alignItems: "center", width: "100%" }}
           >
             <img
               src={containerIcon}
               alt="Rooms and Guests Icon"
-              className="guestsIcon"
-              style={{ marginRight: 8 }}
+              className={styles.guestsIcon}
             />
-            <span style={{ flex: 1 }}>
+            <span>
               {rooms} room{rooms > 1 ? "s" : ""}, {guests} guest{guests > 1 ? "s" : ""}
             </span>
             <img
               src={chevronDown}
               alt="Toggle Dropdown"
-              style={{ marginLeft: 8 }}
+              className={styles.chevronDown}
             />
           </button>
 
           {roomsGuestsOpen && (
-            <div className="dropdown-menu">
-              <div className="dropdown-item">
-                <span className="dropdown-label">Rooms</span>
-                <div className="counter">
+            <div className={styles.dropdownMenu}>
+              <div className={styles.dropdownItem}>
+                <span className={styles.dropdownLabel}>Rooms</span>
+                <div className={styles.counter}>
                   <button
                     type="button"
                     onClick={() => changeRooms(-1)}
-                    className="counter-btn"
+                    className={styles.counterBtn}
                     aria-label="Decrease rooms"
                   >
                     -
                   </button>
-                  <span className="counter-value">{rooms}</span>
+                  <span className={styles.counterValue}>{rooms}</span>
                   <button
                     type="button"
                     onClick={() => changeRooms(1)}
-                    className="counter-btn"
+                    className={styles.counterBtn}
                     aria-label="Increase rooms"
                   >
                     +
@@ -170,22 +166,22 @@ export default function DestinationFilter() {
                 </div>
               </div>
 
-              <div className="dropdown-item">
-                <span className="dropdown-label">Guest</span>
-                <div className="counter">
+              <div className={styles.dropdownItem}>
+                <span className={styles.dropdownLabel}>Guest</span>
+                <div className={styles.counter}>
                   <button
                     type="button"
                     onClick={() => changeGuests(-1)}
-                    className="counter-btn"
+                    className={styles.counterBtn}
                     aria-label="Decrease guests"
                   >
                     -
                   </button>
-                  <span className="counter-value">{guests}</span>
+                  <span className={styles.counterValue}>{guests}</span>
                   <button
                     type="button"
                     onClick={() => changeGuests(1)}
-                    className="counter-btn"
+                    className={styles.counterBtn}
                     aria-label="Increase guests"
                   >
                     +
@@ -197,8 +193,8 @@ export default function DestinationFilter() {
         </div>
 
         {/* Search Button */}
-        <div className="search-btn-container">
-          <button type="submit" className="search-btn" aria-label="Search button">
+        <div className={styles.searchBtnContainer}>
+          <button type="submit" className={styles.searchBtn} aria-label="Search button">
             Search
           </button>
         </div>

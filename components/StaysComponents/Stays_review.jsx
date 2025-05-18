@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import "./Stays_Review.css"; 
+import styles from "./Stays_Review.module.css"; 
+
 export default function StaysReview() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [reviewText, setReviewText] = useState('');
@@ -62,28 +63,28 @@ export default function StaysReview() {
   };
 
   return (
-    <div className="stays-review-container">
-      <div className="review-header">
-        <h2 className="review-title">What People say about us</h2>
-        <p className="review-subtitle">What people says about our facilities and services</p>
+    <div className={styles.staysReviewContainer}>
+      <div className={styles.reviewHeader}>
+        <h2 className={styles.reviewTitle}>What People say about us</h2>
+        <p className={styles.reviewSubtitle}>What people says about our facilities and services</p>
       </div>
       
-      <div className="review-cards-container">
+      <div className={styles.reviewCardsContainer}>
         {reviews.map((review) => (
-          <div key={review.id} className="review-card">
-            <div className="review-user">
-              <img src={review.profileImage} alt="User profile" className="user-image" />
-              <div className="user-info">
-                <p className="user-name">{review.user}</p>
-                <p className="user-country">{review.country}</p>
+          <div key={review.id} className={styles.reviewCard}>
+            <div className={styles.reviewUser}>
+              <img src={review.profileImage} alt="User profile" className={styles.userImage} />
+              <div className={styles.userInfo}>
+                <p className={styles.userName}>{review.user}</p>
+                <p className={styles.userCountry}>{review.country}</p>
               </div>
             </div>
-            <p className="review-text">{review.text}</p>
-            <div className="review-rating">
+            <p className={styles.reviewText}>{review.text}</p>
+            <div className={styles.reviewRating}>
               {[...Array(5)].map((_, i) => (
                 <span 
                   key={i} 
-                  className={`star ${i < review.rating ? 'filled' : ''}`}
+                  className={`${styles.star} ${i < review.rating ? styles.filled : ""}`}
                 >
                   ★
                 </span>
@@ -93,26 +94,26 @@ export default function StaysReview() {
         ))}
       </div>
       
-      <div className="add-review-btn-container">
-        <button className="add-review-btn" onClick={openModal}>
+      <div className={styles.addReviewBtnContainer}>
+        <button className={styles.addReviewBtn} onClick={openModal}>
           Add Review
         </button>
       </div>
       
       {isModalOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="review-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-content">
-              <div className="modal-header">
-                <h3 className="modal-title">How is your</h3>
-                <h2 className="modal-subtitle">Experience</h2>
+        <div className={styles.modalOverlay} onClick={closeModal}>
+          <div className={styles.reviewModal} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.modalContent}>
+              <div className={styles.modalHeader}>
+                <h3 className={styles.modalTitle}>How is your</h3>
+                <h2 className={styles.modalSubtitle}>Experience</h2>
               </div>
               
-              <div className="rating-selector">
+              <div className={styles.ratingSelector}>
                 {[...Array(5)].map((_, i) => (
                   <span 
                     key={i} 
-                    className={`rating-star ${i < rating ? 'filled' : ''}`}
+                    className={`${styles.ratingStar} ${i < rating ? styles.filled : ""}`}
                     onClick={() => handleRatingClick(i + 1)}
                   >
                     ★
@@ -120,17 +121,17 @@ export default function StaysReview() {
                 ))}
               </div>
               
-              <p className="review-form-label">Write your review</p>
+              <p className={styles.reviewFormLabel}>Write your review</p>
               <textarea
-                className="review-input"
+                className={styles.reviewInput}
                 value={reviewText}
                 onChange={(e) => setReviewText(e.target.value)}
                 placeholder="Write your review here..."
                 rows={5}
               />
               
-              <div className="modal-actions">
-                <button className="submit-btn" onClick={handleSubmit}>
+              <div className={styles.modalActions}>
+                <button className={styles.submitBtn} onClick={handleSubmit}>
                   Submit
                 </button>
               </div>
