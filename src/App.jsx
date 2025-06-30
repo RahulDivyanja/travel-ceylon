@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from '../src/pages/Home'; 
-import Stays from "../src/pages/Stays"; 
-import Taxi from  "../src/pages/Taxi/Taxi";
+import Home from '../src/pages/Home';
+import Stays from "../src/pages/Stays";
+import Taxi from "../src/pages/Taxi/Taxi";
 import TourGuides from "../src/pages/TourGuides";
 import StaysFilter from "../src/pages/StaysFilter";
 
@@ -30,6 +30,7 @@ import GuideStepOne from "./pages/Registration/TourGuideRegistration/guide-One";
 import GuideStepTwo from "./pages/Registration/TourGuideRegistration/guide-Two";
 import GuideStepThree from "./pages/Registration/TourGuideRegistration/guide-Three";
 import GuideStepFour from "./pages/Registration/TourGuideRegistration/guide-Four";
+import User from "./pages/User";
 
 function App() {
   return (
@@ -67,6 +68,8 @@ function App() {
         <Route path="/registration/guide-step-two" element={<GuideStepTwo />} />
         <Route path="/registration/guide-step-three" element={<GuideStepThree />} />
         <Route path="/registration/guide-step-four" element={<GuideStepFour />} />
+
+        <Route path="/user" element={<User />} />
       </Routes>
     </Router>
   );
