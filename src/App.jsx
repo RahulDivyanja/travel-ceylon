@@ -35,7 +35,7 @@ import User from "./pages/User";
 function App() {
   return (
     <Router>
-      <NavbarHome /> {/* Keep Navbar globally visible */}
+      
       <Routes>
         {/* Main Pages */}
         <Route path="/" element={<Home />} />
